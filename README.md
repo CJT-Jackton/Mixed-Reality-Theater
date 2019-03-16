@@ -9,6 +9,10 @@ This project intended to bring a new dimension of theater performance experience
 - Microsoft HoloLens
 - Magic Leap
 
+## Design
+
+![design](https://raw.githubusercontent.com/CJT-Jackton/Mixed-Reality-Theater/master/Images/MR-Theater-design.svg?sanitize=true "Design")
+
 ## Requirements
 
 .NET Framework 4.6.1
