@@ -13,6 +13,18 @@ This project intended to bring a new dimension of theater performance experience
 
 ![design](https://raw.githubusercontent.com/CJT-Jackton/Mixed-Reality-Theater/master/Images/MR-Theater-design.svg?sanitize=true "Design")
 
+### Control application (server)
+
+Control application running on the director's machine. It connected to all AR-glasses in the theater and control the virtual stage effects.
+
+### Viewing application (client)
+
+Viewing application running on the AR-glasses. It handles the receive of the message from server and create the virtual effect at certain location in real world.
+
+### Message
+
+All networking messages sent between server and client start with a 4-bytes header. The first 2-bytes `size` representing the length of the packet, then the next 2-bytes `type` representing the type of the message. `NetworkReader` and `NetworkWriter` are the deserializer and serializer.
+
 ## Requirements
 
 .NET Framework 4.6.1
