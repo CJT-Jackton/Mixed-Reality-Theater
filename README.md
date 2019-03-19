@@ -27,10 +27,12 @@ All networking messages sent between server and client start with a 4-bytes head
 
 ## Requirements
 
-.NET Framework 4.6.1
+- Microsoft Visual Studio 2017
+- .NET Framework 4.6.1
+- Windows SDK 10.0.17134 or later
 
 #### Microsoft HoloLens
-Unity 2018.3.3f1, [Mixed Reality Toolkit (Unity)](https://github.com/Microsoft/MixedRealityToolkit-Unity)
+Unity 2018.3.x or later, [Mixed Reality Toolkit (Unity)](https://github.com/Microsoft/MixedRealityToolkit-Unity)
 
 #### Magic Leap
 [Unity 2018.1.9f2-MLTP10](https://unity3d.com/partners/magicleap), Magic Leap SDK
