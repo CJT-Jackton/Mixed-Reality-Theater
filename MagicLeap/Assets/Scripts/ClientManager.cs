@@ -30,12 +30,12 @@ public class ClientManager : MonoBehaviour
 
     }
 
-    public void UploadAnchor(Transform transform)
+    public void UploadAnchor(Vector3 pos)
     {
         AnchorMessage msg = new AnchorMessage();
         msg.connectId = 0;
-        msg.position = transform.position;
-        msg.rotation = transform.rotation.eulerAngles;
+        msg.position = pos;
+        msg.rotation = new Vector3(0,0,0);
 
         client.SendMsg(msg);
     }

@@ -12,17 +12,16 @@ public class Controller : MonoBehaviour
     {
         MLInput.Start();
         MLInput.OnControllerButtonDown += OnButtonDown;
-        MLInput.OnControllerButtonUp += OnButtonUp;
 
         _MLInputController = MLInput.GetController(MLInput.Hand.Left);
+
         controllerObject.SetActive(true);
-        hitObject.SetActive(false);
+        hitObject.SetActive(true);
     }
 
     void OnDestory()
     {
         MLInput.OnControllerButtonDown -= OnButtonDown;
-        MLInput.OnControllerButtonUp -= OnButtonUp;
         MLInput.Stop();
     }
 
@@ -32,17 +31,22 @@ public class Controller : MonoBehaviour
         controllerObject.transform.position = _MLInputController.Position;
         controllerObject.transform.rotation = _MLInputController.Orientation;
 
-        if (_MLInputController.TriggerValue == 1)
+        if (_MLInputController.TriggerValue > 0.5f)
         {
-            transform.Translate(0, 0, -0.01f);
+            controllerObject.transform.Translate(0, 0, -0.01f);
 
             RaycastHit hit;
 
-            if (Physics.Raycast(transform.position, transform.forward, out hit, 200))
+            if (Physics.Raycast(controllerObject.transform.position, controllerObject.transform.forward, out hit, 200))
             {
                 hitObject.transform.position = hit.point;
 
-                GetComponent<ClientManager>().UploadAnchor(hitObject.transform);
+                if (hit.rigidbody)
+                {
+                    hit.rigidbody.constraints = RigidbodyConstraints.None;
+                    hit.rigidbody.AddForceAtPosition(controllerObject.transform.forward * 5, hit.point);
+                    Destroy(hit.rigidbody.gameObject, 3);
+                }
             }
         }
     }
@@ -51,7 +55,12 @@ public class Controller : MonoBehaviour
     {
         if (button == MLInputControllerButton.Bumper)
         {
-            hitObject.transform.position = _MLInputController.Position;
+            RaycastHit hit;
+
+            if (Physics.Raycast(controllerObject.transform.position, controllerObject.transform.forward, out hit, 200))
+            {
+                GetComponent<ClientManager>().UploadAnchor(hit.point);
+            }
         }
     }
 

@@ -41,6 +41,12 @@ public class FollowController : MonoBehaviour
             if (Physics.Raycast(transform.position, transform.forward, out hit, 200))
             {
                 hitObject.transform.position = hit.point;
+
+                if (hit.rigidbody)
+                {
+                    hit.rigidbody.constraints = RigidbodyConstraints.None;
+                    hit.rigidbody.AddForceAtPosition(transform.forward * 10, hit.point);
+                }
             }
         }
     }
