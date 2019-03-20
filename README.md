@@ -7,9 +7,11 @@ This project intended to bring a new dimension of theater performance experience
 ### Supported hardware
 
 - Microsoft HoloLens
-- Magic Leap
+- Magic Leap One
 
 ## Design
+
+![design](https://raw.githubusercontent.com/CJT-Jackton/Mixed-Reality-Theater/master/Images/MR-Theater-design2.svg?sanitize=true "Design")
 
 ![design](https://raw.githubusercontent.com/CJT-Jackton/Mixed-Reality-Theater/master/Images/MR-Theater-design.svg?sanitize=true "Design")
 
@@ -32,8 +34,10 @@ All networking messages sent between server and client start with a 4-bytes head
 - Windows SDK 10.0.17134 or later
 
 #### Microsoft HoloLens
-Unity 2018.3.x or later, [Mixed Reality Toolkit (Unity)](https://github.com/Microsoft/MixedRealityToolkit-Unity)
+- Unity 2018.3.x or later
+- [Mixed Reality Toolkit (Unity)](https://github.com/Microsoft/MixedRealityToolkit-Unity)
 
-#### Magic Leap
-[Unity 2018.1.9f2-MLTP10](https://unity3d.com/partners/magicleap), Magic Leap SDK
+#### Magic Leap One
+- [Unity 2018.1.9f2-MLTP10](https://unity3d.com/partners/magicleap)
+- Magic Leap SDK
 
