@@ -9,10 +9,11 @@ class TCPClient
 {
     public TcpClient client;
     public NetworkStream stream;
-    
-    public DebugLog debugLog;
+
+    //public DebugLog debugLog;
     public SpawnManager spawnManager;
 
+    public string ServerDomain = "mrtheaterserver.webredirect.org";
     public string IpAddress = "127.0.0.1";
     public int port = 8848;
 
@@ -31,10 +32,10 @@ class TCPClient
 
         asyncBuffer = new byte[8192];
 
-        client.BeginConnect(IpAddress, port, OnConnected, null);
+        //client.BeginConnect(IpAddress, port, OnConnected, null);
 
-        //IPAddress[] remoteHost = Dns.GetHostAddresses("host.contoso.com");
-        //client.BeginConnect(remoteHost, 8848, OnConnected, null);
+        IPAddress[] remoteHost = Dns.GetHostAddresses(ServerDomain);
+        client.BeginConnect(remoteHost, port, OnConnected, null);
     }
 
     private void OnConnected(IAsyncResult result)
@@ -105,10 +106,10 @@ class TCPClient
             {
                 TextMessage msg = new TextMessage();
                 msg.Deserialize(networkReader);
-                
+
                 Debug.Log(msg.payload);
 
-                debugLog.Log(msg.payload);
+                //debugLog.Log(msg.payload);
             }
 
             stream.BeginRead(asyncBuffer, 0, asyncBuffer.Length, OnReceivedData, null);
@@ -116,8 +117,7 @@ class TCPClient
         catch (Exception)
         {
             Debug.Log("Disconnected from server.");
-            //Application.Quit();
-            //Connect();
+            Application.Quit();
             return;
         }
     }
@@ -134,7 +134,7 @@ class TCPClient
         {
             msgType = MRTMsgType.Anchor;
         }
-        else if(msg.GetType().Name == "SpawnMessage")
+        else if (msg.GetType().Name == "SpawnMessage")
         {
             msgType = MRTMsgType.Spawn;
         }

@@ -5,6 +5,7 @@ public class Controller : MonoBehaviour
 {
     public GameObject controllerObject;
     public GameObject hitObject;
+
     private MLInputController _MLInputController;
 
     // Use this for initialization

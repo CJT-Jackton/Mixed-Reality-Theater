@@ -3,7 +3,8 @@ using UnityEngine.UI;
 
 public class ClientManager : MonoBehaviour
 {
-    public string IpAddress = "127.0.0.1";
+    public string ServerDomain = "mrtheaterserver.webredirect.org";
+    //public string IpAddress = "127.0.0.1";
 
     private TCPClient client;
 
@@ -13,8 +14,7 @@ public class ClientManager : MonoBehaviour
         DontDestroyOnLoad(this);
 
         client = new TCPClient();
-        client.IpAddress = IpAddress;
-        client.debugLog = GetComponent<DebugLog>();
+        client.ServerDomain = ServerDomain;
         client.spawnManager = GetComponent<SpawnManager>();
         client.Connect();
     }
@@ -35,7 +35,7 @@ public class ClientManager : MonoBehaviour
         AnchorMessage msg = new AnchorMessage();
         msg.connectId = 0;
         msg.position = pos;
-        msg.rotation = new Vector3(0,0,0);
+        msg.rotation = new Vector3(0, 0, 0);
 
         client.SendMsg(msg);
     }

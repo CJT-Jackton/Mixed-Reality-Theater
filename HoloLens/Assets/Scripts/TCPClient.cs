@@ -13,6 +13,7 @@ class TCPClient
     //public DebugLog debugLog;
     public SpawnManager spawnManager;
 
+    public string ServerDomain = "mrtheaterserver.webredirect.org";
     public string IpAddress = "127.0.0.1";
     public int port = 8848;
 
@@ -31,10 +32,10 @@ class TCPClient
 
         asyncBuffer = new byte[8192];
 
-        client.BeginConnect(IpAddress, port, OnConnected, null);
+        //client.BeginConnect(IpAddress, port, OnConnected, null);
 
-        //IPAddress[] remoteHost = Dns.GetHostAddresses("host.contoso.com");
-        //client.BeginConnect(remoteHost, 8848, OnConnected, null);
+        IPAddress[] remoteHost = Dns.GetHostAddresses(ServerDomain);
+        client.BeginConnect(remoteHost, port, OnConnected, null);
     }
 
     private void OnConnected(IAsyncResult result)
