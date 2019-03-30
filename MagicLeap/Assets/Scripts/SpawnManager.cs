@@ -1,33 +1,43 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class SpawnManager : MonoBehaviour
 {
     public GameObject[] prefabs;
 
-    private SpawnMessage spawnMsg;
-    private bool spawnPrefab;
+    private SpawnMessage _spawnMsg;
+    private bool _spawnPrefab;
+
+    #region Unity Methods
 
     // Use this for initialization
     void Start()
     {
-        spawnPrefab = false;
+        _spawnPrefab = false;
     }
 
     void Update()
     {
-        if (spawnPrefab)
+        if (_spawnPrefab)
         {
-            Instantiate(prefabs[spawnMsg.prefabId], spawnMsg.position, Quaternion.Euler(spawnMsg.rotation));
-            spawnPrefab = false;
+            GameObject newInstantiate = Instantiate(prefabs[_spawnMsg.prefabId]);
+            newInstantiate.transform.SetParent(GameObject.Find("World Origin").transform);
+            newInstantiate.transform.localPosition = _spawnMsg.position;
+            newInstantiate.transform.localRotation = Quaternion.Euler(_spawnMsg.rotation);
+
+            _spawnPrefab = false;
         }
     }
+
+    #endregion
+
+    #region Public Methods
 
     public void Spawn(SpawnMessage msg)
     {
         Debug.Log(msg.payload);
-        spawnMsg = msg;
-        spawnPrefab = true;
+        _spawnMsg = msg;
+        _spawnPrefab = true;
     }
+
+    #endregion
 }
