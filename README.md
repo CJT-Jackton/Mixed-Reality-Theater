@@ -13,13 +13,13 @@ This project intended to bring a new dimension of theater performance experience
 
 ### Workflow
 
-1. **Coordinate system calibration**
+1. **Coordinate system calibration** (subject to changes)
 
     In order to let multiple devices sharing the same scene, they must be calibrated to the exactly same coordinate system. The AR-glasses has the ability to recognize its surrounding and perceive its spatial location. HoloLens use World Anchor to anchor the virtual coordinate system to real world. Magic Leap use Persistence Coordinate Frames which essentially is the same thing. However, Magic Leap One will not support the sharing of PCF before Lumin SDK 0.21.0 and OS 0.96.0. Therefore in this implementation the coordinate calibration is done by image tracking. A stationary image in real world will act as the origin point of virtual world, and every devices need to scan the image to complete the calibration.
 
 2. **Virtual object/effect placement**
 
-    The director of the performance will wear on the AR-glasses, and emplace the virtual object/effect. After finalize the arrangement of virtual stage effects, the director's AR-glasses will send the anchor data to the server. The server will stored the anchor informations, ready for the performance.
+    The director of the performance will wear on the AR-glasses, and emplace the virtual object/effect. After finalized the arrangement of virtual stage effects, the director's AR-glasses will send the anchor data of the virtual stage effects to the server. The server will stored the anchor informations, ready for the performance.
 ![design](https://raw.githubusercontent.com/CJT-Jackton/Mixed-Reality-Theater/master/Images/MR-Theater-design2.svg?sanitize=true "Design")
 
 3. **Stage effect control**
