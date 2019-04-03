@@ -101,6 +101,9 @@ namespace MRTheater_Server
 
             // send message to client
             clients[connectionId].stream.BeginWrite(writer.ToArray(), 0, writer.ToArray().Length, null, null);
+
+            Console.Write("(" + DateTime.Now.ToString("HH:mm:ss") + "): ");
+            Console.WriteLine("Sent message to client {0}.", connectionId);
         }
 
         private void SendWelcome(int connectionId)

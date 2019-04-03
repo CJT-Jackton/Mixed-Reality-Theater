@@ -26,9 +26,45 @@ namespace MRTheater_Server
                 else if (input == "spawn")
                 {
                     SpawnMessage msg = new SpawnMessage();
-                    msg.prefabId = 0;
-                    msg.position = new Vector3(0.4f, 1.2f, -1.1f);
-                    msg.rotation = new Vector3(0.0f, 0.0f, 0.0f);
+
+                    int id;
+                    Console.Write("Prefab Id: ");
+
+                    while ((input = Console.ReadLine()) != null)
+                    {
+                        if (Int32.TryParse(input, out id))
+                        {
+                            msg.prefabId = id;
+                            break;
+                        }
+                    }
+
+                    Console.Write("Position: ");
+
+                    while ((input = Console.ReadLine()) != null)
+                    {
+                        Vector3 vec;
+
+                        if (Vector3.TryParse(input, out vec))
+                        {
+                            msg.position = vec;
+                            break;
+                        }
+                    }
+
+                    Console.Write("Rotation: ");
+
+                    while ((input = Console.ReadLine()) != null)
+                    {
+                        Vector3 vec;
+
+                        if (Vector3.TryParse(input, out vec))
+                        {
+                            msg.rotation = vec;
+                            break;
+                        }
+                    }
+
                     msg.payload = "Spawn barrel.";
 
                     server.SendMsgToAll(msg);

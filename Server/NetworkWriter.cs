@@ -4,11 +4,24 @@ using System.Text;
 
 namespace MRTheater_Server
 {
+    /// <summary>
+    /// General purpose serializer. A class with same interfaces with UNET's NetworkWriter, see https://docs.unity3d.com/ScriptReference/Networking.NetworkWriter.html.
+    /// </summary>
     class NetworkWriter
     {
+        /// <summary>
+        /// The buffer.
+        /// </summary>
         private List<byte> buffer;
 
+        /// <summary>
+        /// The type of the message.
+        /// </summary>
         private short type;
+
+        /// <summary>
+        /// The size of the message.
+        /// </summary>
         private short size;
 
         /// <summary>
@@ -20,11 +33,18 @@ namespace MRTheater_Server
             size = 0;
         }
 
+        /// <summary>
+        /// This begins a new message, which should be completed with FinishMessage() once the payload has been written.
+        /// </summary>
+        /// <param name="msgType">The type of the message.</param>
         public void StartMessage(short msgType)
         {
             type = msgType;
         }
 
+        /// <summary>
+        /// This fills out the size header of a message begun with StartMessage(), so that it can be send using Send() functions.
+        /// </summary>
         public void FinishMessage()
         {
             buffer.InsertRange(0, BitConverter.GetBytes(size));
