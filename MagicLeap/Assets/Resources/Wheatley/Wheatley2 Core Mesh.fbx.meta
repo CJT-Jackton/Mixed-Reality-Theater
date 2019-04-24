@@ -1,0 +1,611 @@
+fileFormatVersion: 2
+guid: b6dbbf175257be040a5c341531d98b8d
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Anchor Bottom Left
+    100002: Anchor top left
+    100004: Anchor Top Right
+    100006: Ancor Bottom Right
+    100008: Apature
+    100010: Base 1
+    100012: Base 2
+    100014: Base 3
+    100016: Base 4
+    100018: BezierCurve
+    100020: BezierCurve.001
+    100022: BezierCurve.002
+    100024: BezierCurve.003
+    100026: BezierCurve.004
+    100028: BezierCurve.005
+    100030: Blue Light Back
+    100032: Blue Light Back.001
+    100034: Blue Light Front
+    100036: Blue Light Front.001
+    100038: Bolt 1
+    100040: Bolt 2
+    100042: Bolt 3
+    100044: Bolt 4
+    100046: Circle
+    100048: Circle.001
+    100050: Circle.002
+    100052: Circle.003
+    100054: Circle.004
+    100056: Circle.005
+    100058: Circle.006
+    100060: Circle.007
+    100062: Circle.008
+    100064: Circle.009
+    100066: Circle.010
+    100068: Circle.011
+    100070: Circle.012
+    100072: Circle.013
+    100074: Circle.014
+    100076: Circle.015
+    100078: Circle.016
+    100080: Circle.017
+    100082: Circle.018
+    100084: Circle.032
+    100086: Connector Left
+    100088: Connector Left.001
+    100090: Connector Left.002
+    100092: Dot 1
+    100094: Dot 2
+    100096: Dot 3
+    100098: Eye Plate
+    100100: eye Rim
+    100102: Faceplate Twist Shape
+    100104: Inner Shell.000
+    100106: Inner Shell.001
+    100108: Inner Shell.002
+    100110: Inner Shell.003
+    100112: Lid Top.000
+    100114: Lid Top.001
+    100116: Master Bone Shape
+    100118: NurbsCircle.004
+    100120: NurbsCircle.008
+    100122: Outer Shell
+    100124: Outer Shell.001
+    100126: Plane
+    100128: Plane.001
+    100130: Plane.002
+    100132: Plane.003
+    100134: Plane.004
+    100136: Plane.005
+    100138: Plane.006
+    100140: Plane.007
+    100142: Plane.008
+    100144: Plane.009
+    100146: Plane.010
+    100148: Plane.011
+    100150: Plane.012
+    100152: Plane.013
+    100154: Plane.014
+    100156: Plane.015
+    100158: Plane.016
+    100160: Plane.017
+    100162: Plane.018
+    100164: Plane.019
+    100166: Plane.020
+    100168: Plane.021
+    100170: Rail Bottom
+    100172: Rail top
+    100174: Socket Rim Left
+    100176: Socket Rim Right
+    100178: Socket Rim Right.001
+    100180: Socket Rim Right.002
+    100182: Socket Rim Right.003
+    100184: Socket Rim Right.004
+    100186: Socket Rim Right.005
+    100188: Socket Rim Right.006
+    100190: SurfPatch
+    100192: SurfPatch.001
+    100194: //RootNode
+    100196: Yellow Light Back
+    100198: Yellow Light Back.001
+    100200: Yellow Light Fron.000
+    100202: Yellow Light Front
+    400000: Anchor Bottom Left
+    400002: Anchor top left
+    400004: Anchor Top Right
+    400006: Ancor Bottom Right
+    400008: Apature
+    400010: Base 1
+    400012: Base 2
+    400014: Base 3
+    400016: Base 4
+    400018: BezierCurve
+    400020: BezierCurve.001
+    400022: BezierCurve.002
+    400024: BezierCurve.003
+    400026: BezierCurve.004
+    400028: BezierCurve.005
+    400030: Blue Light Back
+    400032: Blue Light Back.001
+    400034: Blue Light Front
+    400036: Blue Light Front.001
+    400038: Bolt 1
+    400040: Bolt 2
+    400042: Bolt 3
+    400044: Bolt 4
+    400046: Circle
+    400048: Circle.001
+    400050: Circle.002
+    400052: Circle.003
+    400054: Circle.004
+    400056: Circle.005
+    400058: Circle.006
+    400060: Circle.007
+    400062: Circle.008
+    400064: Circle.009
+    400066: Circle.010
+    400068: Circle.011
+    400070: Circle.012
+    400072: Circle.013
+    400074: Circle.014
+    400076: Circle.015
+    400078: Circle.016
+    400080: Circle.017
+    400082: Circle.018
+    400084: Circle.032
+    400086: Connector Left
+    400088: Connector Left.001
+    400090: Connector Left.002
+    400092: Dot 1
+    400094: Dot 2
+    400096: Dot 3
+    400098: Eye Plate
+    400100: eye Rim
+    400102: Faceplate Twist Shape
+    400104: Inner Shell.000
+    400106: Inner Shell.001
+    400108: Inner Shell.002
+    400110: Inner Shell.003
+    400112: Lid Top.000
+    400114: Lid Top.001
+    400116: Master Bone Shape
+    400118: NurbsCircle.004
+    400120: NurbsCircle.008
+    400122: Outer Shell
+    400124: Outer Shell.001
+    400126: Plane
+    400128: Plane.001
+    400130: Plane.002
+    400132: Plane.003
+    400134: Plane.004
+    400136: Plane.005
+    400138: Plane.006
+    400140: Plane.007
+    400142: Plane.008
+    400144: Plane.009
+    400146: Plane.010
+    400148: Plane.011
+    400150: Plane.012
+    400152: Plane.013
+    400154: Plane.014
+    400156: Plane.015
+    400158: Plane.016
+    400160: Plane.017
+    400162: Plane.018
+    400164: Plane.019
+    400166: Plane.020
+    400168: Plane.021
+    400170: Rail Bottom
+    400172: Rail top
+    400174: Socket Rim Left
+    400176: Socket Rim Right
+    400178: Socket Rim Right.001
+    400180: Socket Rim Right.002
+    400182: Socket Rim Right.003
+    400184: Socket Rim Right.004
+    400186: Socket Rim Right.005
+    400188: Socket Rim Right.006
+    400190: SurfPatch
+    400192: SurfPatch.001
+    400194: //RootNode
+    400196: Yellow Light Back
+    400198: Yellow Light Back.001
+    400200: Yellow Light Fron.000
+    400202: Yellow Light Front
+    2100000: Rail Rubber
+    2100002: White
+    2100004: Yellow Cord
+    2100006: No Name
+    2100008: Black Shadow
+    2100010: Panel
+    2100012: Base
+    2100014: Lights
+    2100016: Power Handle
+    2100018: Green Metal
+    2100020: Eye Rim
+    2100022: Eye Center
+    2100024: Bolts
+    2100026: Material.006
+    2100028: Material.001
+    2100030: Material
+    2100032: Material.002
+    2300000: Anchor Bottom Left
+    2300002: Anchor top left
+    2300004: Anchor Top Right
+    2300006: Ancor Bottom Right
+    2300008: Apature
+    2300010: Base 1
+    2300012: Base 2
+    2300014: Base 3
+    2300016: Base 4
+    2300018: BezierCurve
+    2300020: BezierCurve.001
+    2300022: BezierCurve.002
+    2300024: BezierCurve.003
+    2300026: BezierCurve.004
+    2300028: BezierCurve.005
+    2300030: Blue Light Back
+    2300032: Blue Light Back.001
+    2300034: Blue Light Front
+    2300036: Blue Light Front.001
+    2300038: Bolt 1
+    2300040: Bolt 2
+    2300042: Bolt 3
+    2300044: Bolt 4
+    2300046: Circle
+    2300048: Circle.001
+    2300050: Circle.002
+    2300052: Circle.003
+    2300054: Circle.004
+    2300056: Circle.005
+    2300058: Circle.006
+    2300060: Circle.007
+    2300062: Circle.008
+    2300064: Circle.009
+    2300066: Circle.010
+    2300068: Circle.011
+    2300070: Circle.012
+    2300072: Circle.013
+    2300074: Circle.014
+    2300076: Circle.015
+    2300078: Circle.016
+    2300080: Circle.017
+    2300082: Circle.018
+    2300084: Circle.032
+    2300086: Connector Left
+    2300088: Connector Left.001
+    2300090: Connector Left.002
+    2300092: Dot 1
+    2300094: Dot 2
+    2300096: Dot 3
+    2300098: Eye Plate
+    2300100: eye Rim
+    2300102: Faceplate Twist Shape
+    2300104: Inner Shell.000
+    2300106: Inner Shell.001
+    2300108: Inner Shell.002
+    2300110: Inner Shell.003
+    2300112: Lid Top.000
+    2300114: Lid Top.001
+    2300116: Master Bone Shape
+    2300118: NurbsCircle.004
+    2300120: NurbsCircle.008
+    2300122: Outer Shell
+    2300124: Outer Shell.001
+    2300126: Plane
+    2300128: Plane.001
+    2300130: Plane.002
+    2300132: Plane.003
+    2300134: Plane.004
+    2300136: Plane.005
+    2300138: Plane.006
+    2300140: Plane.007
+    2300142: Plane.008
+    2300144: Plane.009
+    2300146: Plane.010
+    2300148: Plane.011
+    2300150: Plane.012
+    2300152: Plane.013
+    2300154: Plane.014
+    2300156: Plane.015
+    2300158: Plane.016
+    2300160: Plane.017
+    2300162: Plane.018
+    2300164: Plane.019
+    2300166: Plane.020
+    2300168: Plane.021
+    2300170: Rail Bottom
+    2300172: Rail top
+    2300174: Socket Rim Left
+    2300176: Socket Rim Right
+    2300178: Socket Rim Right.001
+    2300180: Socket Rim Right.002
+    2300182: Socket Rim Right.003
+    2300184: Socket Rim Right.004
+    2300186: Socket Rim Right.005
+    2300188: Socket Rim Right.006
+    2300190: SurfPatch
+    2300192: SurfPatch.001
+    2300194: Yellow Light Back
+    2300196: Yellow Light Back.001
+    2300198: Yellow Light Fron.000
+    2300200: Yellow Light Front
+    3300000: Anchor Bottom Left
+    3300002: Anchor top left
+    3300004: Anchor Top Right
+    3300006: Ancor Bottom Right
+    3300008: Apature
+    3300010: Base 1
+    3300012: Base 2
+    3300014: Base 3
+    3300016: Base 4
+    3300018: BezierCurve
+    3300020: BezierCurve.001
+    3300022: BezierCurve.002
+    3300024: BezierCurve.003
+    3300026: BezierCurve.004
+    3300028: BezierCurve.005
+    3300030: Blue Light Back
+    3300032: Blue Light Back.001
+    3300034: Blue Light Front
+    3300036: Blue Light Front.001
+    3300038: Bolt 1
+    3300040: Bolt 2
+    3300042: Bolt 3
+    3300044: Bolt 4
+    3300046: Circle
+    3300048: Circle.001
+    3300050: Circle.002
+    3300052: Circle.003
+    3300054: Circle.004
+    3300056: Circle.005
+    3300058: Circle.006
+    3300060: Circle.007
+    3300062: Circle.008
+    3300064: Circle.009
+    3300066: Circle.010
+    3300068: Circle.011
+    3300070: Circle.012
+    3300072: Circle.013
+    3300074: Circle.014
+    3300076: Circle.015
+    3300078: Circle.016
+    3300080: Circle.017
+    3300082: Circle.018
+    3300084: Circle.032
+    3300086: Connector Left
+    3300088: Connector Left.001
+    3300090: Connector Left.002
+    3300092: Dot 1
+    3300094: Dot 2
+    3300096: Dot 3
+    3300098: Eye Plate
+    3300100: eye Rim
+    3300102: Faceplate Twist Shape
+    3300104: Inner Shell.000
+    3300106: Inner Shell.001
+    3300108: Inner Shell.002
+    3300110: Inner Shell.003
+    3300112: Lid Top.000
+    3300114: Lid Top.001
+    3300116: Master Bone Shape
+    3300118: NurbsCircle.004
+    3300120: NurbsCircle.008
+    3300122: Outer Shell
+    3300124: Outer Shell.001
+    3300126: Plane
+    3300128: Plane.001
+    3300130: Plane.002
+    3300132: Plane.003
+    3300134: Plane.004
+    3300136: Plane.005
+    3300138: Plane.006
+    3300140: Plane.007
+    3300142: Plane.008
+    3300144: Plane.009
+    3300146: Plane.010
+    3300148: Plane.011
+    3300150: Plane.012
+    3300152: Plane.013
+    3300154: Plane.014
+    3300156: Plane.015
+    3300158: Plane.016
+    3300160: Plane.017
+    3300162: Plane.018
+    3300164: Plane.019
+    3300166: Plane.020
+    3300168: Plane.021
+    3300170: Rail Bottom
+    3300172: Rail top
+    3300174: Socket Rim Left
+    3300176: Socket Rim Right
+    3300178: Socket Rim Right.001
+    3300180: Socket Rim Right.002
+    3300182: Socket Rim Right.003
+    3300184: Socket Rim Right.004
+    3300186: Socket Rim Right.005
+    3300188: Socket Rim Right.006
+    3300190: SurfPatch
+    3300192: SurfPatch.001
+    3300194: Yellow Light Back
+    3300196: Yellow Light Back.001
+    3300198: Yellow Light Fron.000
+    3300200: Yellow Light Front
+    4300000: Socket Rim Right.006
+    4300002: Socket Rim Right.005
+    4300004: Socket Rim Right.004
+    4300006: Socket Rim Right.003
+    4300008: Socket Rim Right.002
+    4300010: Socket Rim Right.001
+    4300012: Plane.021
+    4300014: Plane.020
+    4300016: Plane.019
+    4300018: Plane.018
+    4300020: Circle.013
+    4300022: BezierCurve.005
+    4300024: BezierCurve.004
+    4300026: BezierCurve.003
+    4300028: BezierCurve.002
+    4300030: BezierCurve.001
+    4300032: Circle.010
+    4300034: Circle.009
+    4300036: Circle.008
+    4300038: Circle.007
+    4300040: Circle.006
+    4300042: Circle.005
+    4300044: Faceplate Twist Shape
+    4300046: Plane.013
+    4300048: Plane
+    4300050: Circle
+    4300052: Master Bone Shape
+    4300054: Circle.012
+    4300056: Circle.011
+    4300058: Lid Top.000
+    4300060: Lid Top.001
+    4300062: Inner Shell.002
+    4300064: Inner Shell.001
+    4300066: Circle.015
+    4300068: Inner Shell.000
+    4300070: Outer Shell.001
+    4300072: Circle.004
+    4300074: Circle.017
+    4300076: Connector Left.002
+    4300078: Circle.002
+    4300080: Circle.001
+    4300082: SurfPatch
+    4300084: Plane.015
+    4300086: Plane.017
+    4300088: Plane.016
+    4300090: Plane.014
+    4300092: Inner Shell.003
+    4300094: Circle.018
+    4300096: Eye Plate
+    4300098: Circle.014
+    4300100: Circle.032
+    4300102: eye Rim
+    4300104: Anchor top left
+    4300106: Bolt 1
+    4300108: Rail top
+    4300110: Anchor Top Right
+    4300112: Bolt 4
+    4300114: Anchor Bottom Left
+    4300116: Bolt 2
+    4300118: Rail Bottom
+    4300120: Ancor Bottom Right
+    4300122: Bolt 3
+    4300124: Outer Shell
+    4300126: Circle.003
+    4300128: Circle.016
+    4300130: Socket Rim Left
+    4300132: Connector Left
+    4300134: SurfPatch.001
+    4300136: BezierCurve
+    4300138: Socket Rim Right
+    4300140: Connector Left.001
+    4300142: NurbsCircle.004
+    4300144: NurbsCircle.008
+    4300146: Base 1
+    4300148: Base 2
+    4300150: Base 3
+    4300152: Base 4
+    4300154: Dot 3
+    4300156: Dot 2
+    4300158: Dot 1
+    4300160: Blue Light Front.001
+    4300162: Yellow Light Fron.000
+    4300164: Yellow Light Back.001
+    4300166: Blue Light Back.001
+    4300168: Blue Light Back
+    4300170: Yellow Light Back
+    4300172: Yellow Light Front
+    4300174: Blue Light Front
+    4300176: Plane.012
+    4300178: Plane.011
+    4300180: Plane.010
+    4300182: Plane.009
+    4300184: Plane.008
+    4300186: Plane.007
+    4300188: Plane.006
+    4300190: Plane.005
+    4300192: Plane.004
+    4300194: Plane.003
+    4300196: Plane.002
+    4300198: Plane.001
+    4300200: Apature
+    2186277476908879412: ImportLogs
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

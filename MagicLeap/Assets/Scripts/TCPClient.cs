@@ -117,7 +117,7 @@ class TCPClient
         catch (Exception)
         {
             Debug.Log("Disconnected from server.");
-            Application.Quit();
+            //Application.Quit();
             return;
         }
     }
