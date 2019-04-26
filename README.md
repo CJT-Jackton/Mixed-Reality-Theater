@@ -9,6 +9,10 @@ This project intended to bring a new dimension of theater performance experience
 - Microsoft HoloLens
 - Magic Leap One
 
+## Demo
+
+Check out the [demo on YouTube](https://www.youtube.com/watch?v=EEx642qwkxE).
+
 ## Design
 
 ### Workflow
