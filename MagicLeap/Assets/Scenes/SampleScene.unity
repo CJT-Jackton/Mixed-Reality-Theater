@@ -167,11 +167,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefabs:
-  - {fileID: 1603591943}
-  - {fileID: 1859791283152250, guid: 6262e2f2d5791934a93d3e2d0d5a892d, type: 2}
+  - {fileID: 1710277086274838, guid: f7cefeabfca841b44b9e2fcc16dfb51a, type: 2}
+  - {fileID: 1091542625533382, guid: fd63296ab23b71f4cad21981651207e9, type: 2}
+  - {fileID: 1449914169338296, guid: 6262e2f2d5791934a93d3e2d0d5a892d, type: 2}
   - {fileID: 1284588324695604, guid: f091bd530e98a5143be18f836f0785f9, type: 2}
-  - {fileID: 1403685076736324, guid: ecdfa353efba3824d9257c5e1370feaa, type: 2}
-  - {fileID: 1723415925532050, guid: ae89cff344cd519468660dbf7e826844, type: 2}
+  - {fileID: 1421944767986108, guid: ecdfa353efba3824d9257c5e1370feaa, type: 2}
   - {fileID: 1889848091824422, guid: 7d72c62de68ab5b4d96d8d53fdb7a685, type: 2}
 --- !u!1001 &309383317
 Prefab:
@@ -182,7 +182,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4660096415485334, guid: 3aae518756c7a3c46bf2b24558dc5b77, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 72
+      value: 372
       objectReference: {fileID: 0}
     - target: {fileID: 4660096415485334, guid: 3aae518756c7a3c46bf2b24558dc5b77, type: 2}
       propertyPath: m_LocalPosition.y
@@ -958,7 +958,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &1532060726
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1079,6 +1079,10 @@ Prefab:
     - target: {fileID: 443432, guid: 75d3f1e03827f0d4f8ffac804e2c4b62, type: 2}
       propertyPath: m_RootOrder
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 144908, guid: 75d3f1e03827f0d4f8ffac804e2c4b62, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 75d3f1e03827f0d4f8ffac804e2c4b62, type: 2}

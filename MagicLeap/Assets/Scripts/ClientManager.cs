@@ -13,7 +13,8 @@ public class ClientManager : MonoBehaviour
     {
         DontDestroyOnLoad(this);
 
-        client = new TCPClient();
+        //client = new TCPClient();
+        client = gameObject.AddComponent<TCPClient>();
         client.ServerDomain = ServerDomain;
         client.spawnManager = GetComponent<SpawnManager>();
         client.Connect();
@@ -30,13 +31,8 @@ public class ClientManager : MonoBehaviour
 
     }
 
-    public void UploadAnchor(Vector3 pos)
+    public void UploadAnchor(DirectorSpawnMessage msg)
     {
-        AnchorMessage msg = new AnchorMessage();
-        msg.connectId = 0;
-        msg.position = pos;
-        msg.rotation = new Vector3(0, 0, 0);
-
         client.SendMsg(msg);
     }
 }

@@ -1,11 +1,12 @@
 ﻿using System;
+using System.Collections;
 using System.Net;
 using System.Net.Sockets;
 using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.UI;
 
-class TCPClient
+class TCPClient : MonoBehaviour
 {
     public TcpClient client;
     public NetworkStream stream;
@@ -20,6 +21,7 @@ class TCPClient
     public bool isConnected;
 
     private byte[] asyncBuffer;
+    private int timeout = 5000;
 
     public void Connect()
     {
@@ -32,16 +34,76 @@ class TCPClient
 
         asyncBuffer = new byte[8192];
 
-        //client.BeginConnect(IpAddress, port, OnConnected, null);
+        IPAddress[] remoteHost = Dns.GetHostAddresses(ServerDomain);
+        IAsyncResult result = client.BeginConnect(remoteHost, port, null, null);
+        
+        try
+        {
+            client.EndConnect(result);
+        }
+        catch (Exception)
+        {
+            isConnected = false;
+        }
+
+        if (!client.Connected)
+        {
+            Invoke("Reconnect", 5.0f);
+        }
+        else
+        {
+            stream = client.GetStream();
+            stream.BeginRead(asyncBuffer, 0, asyncBuffer.Length, OnReceivedData, null);
+
+            isConnected = true;
+
+            Debug.Log("Successfully connected to the server.");
+        }
+    }
+
+    public void Reconnect()
+    {
+        Debug.Log("Attempting re-establish connection to server.");
+
+        client = new TcpClient();
+
+        client.SendBufferSize = 4096;
+        client.ReceiveBufferSize = 4096;
+
+        asyncBuffer = new byte[8192];
 
         IPAddress[] remoteHost = Dns.GetHostAddresses(ServerDomain);
-        client.BeginConnect(remoteHost, port, OnConnected, null);
+        IAsyncResult result = client.BeginConnect(remoteHost, port, null, null);
+
+        try
+        {
+            client.EndConnect(result);
+        }
+        catch (Exception)
+        {
+            isConnected = false;
+        }
+
+        if (!client.Connected)
+        {
+            Invoke("Reconnect", 5.0f);
+        }
+        else
+        {
+            stream = client.GetStream();
+            stream.BeginRead(asyncBuffer, 0, asyncBuffer.Length, OnReceivedData, null);
+
+            isConnected = true;
+
+            Debug.Log("Successfully connected to the server.");
+        }
     }
 
     private void OnConnected(IAsyncResult result)
     {
         try
         {
+            CancelInvoke("Reconnect");
             client.EndConnect(result);
 
             if (!client.Connected)
@@ -76,7 +138,6 @@ class TCPClient
             if (length <= 0)
             {
                 Debug.Log("Disconnected from server.");
-                Application.Quit();
                 return;
             }
 
@@ -95,12 +156,11 @@ class TCPClient
                 SpawnMessage msg = new SpawnMessage();
                 msg.Deserialize(networkReader);
 
-                //Debug.Log(msg.connectId);
-                //Debug.Log(msg.prefabId);
-                Debug.Log(msg.position.ToString("F4"));
-                Debug.Log(msg.payload);
-
                 spawnManager.Spawn(msg);
+            }
+            else if (readerMsgType == MRTMsgType.DestroyAllStatic)
+            {
+                spawnManager.DestroyAll();
             }
             else if (readerMsgType == MRTMsgType.Text)
             {
@@ -117,8 +177,6 @@ class TCPClient
         catch (Exception)
         {
             Debug.Log("Disconnected from server.");
-            //Application.Quit();
-            return;
         }
     }
 
@@ -132,7 +190,7 @@ class TCPClient
         }
         else if (msg.GetType().Name == "AnchorMessage")
         {
-            msgType = MRTMsgType.Anchor;
+            msgType = MRTMsgType.DirectorSpawn;
         }
         else if (msg.GetType().Name == "SpawnMessage")
         {

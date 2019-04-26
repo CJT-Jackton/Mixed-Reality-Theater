@@ -34,9 +34,9 @@ public class BeamPosition : MonoBehaviour
 
     #region Unity Methods
 
-    void Start()
+    void Awake()
     {
-        startTime = Time.timeSinceLevelLoad;
+        startTime = Time.time;
         endPos = transform.Find("End Point").gameObject;
         endPos.transform.position = transform.position;
         _halo = transform.Find("Halo").gameObject.GetComponent<ParticleSystem>();
@@ -44,7 +44,7 @@ public class BeamPosition : MonoBehaviour
         _hitSpark = transform.Find("Hit").transform.Find("Spark").gameObject.GetComponent<ParticleSystem>();
 
         // Remove itself
-        Destroy(gameObject, duration + 1.0f);
+        Destroy(gameObject, duration + 10.0f);
     }
 
     // Update is called once per frame
@@ -69,7 +69,7 @@ public class BeamPosition : MonoBehaviour
 
             RaycastHit hit;
 
-            if (Physics.Raycast(transform.position, direction.normalized, out hit, length))
+            if (Physics.Raycast(transform.position, transform.forward, out hit, length))
             {
                 if (!hit.collider.isTrigger)
                 {
